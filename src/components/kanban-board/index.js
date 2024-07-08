@@ -77,8 +77,9 @@ const KanbanBoard = () => {
                                         return (
                                             <li
                                                 className="slide-up-fade-in"
-                                                key={`${i}${index}`} //如果你在浏览器的开发者工具中查看生成的 HTML 结构，并不会看到 key 属性。这是因为 key 是 React 在渲染过程中使用的工具，并不是作为最终渲染输出的一部分。
+                                                key={`stage${i}-task${index}`} //如果你在浏览器的开发者工具中查看生成的 HTML 结构，并不会看到 key 属性。这是因为 key 是 React 在渲染过程中使用的工具，并不是作为最终渲染输出的一部分。
                                             >
+                                                {/* 其实你不用费这么大劲编辑key叫什么，因为browser上显示不出来，但是为了维护稍微写下 */}
                                                 <div className="li-content layout-row justify-content-between align-items-center">
                                                     <span
                                                         data-testid={`${task.name
